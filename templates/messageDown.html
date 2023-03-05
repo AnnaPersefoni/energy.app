@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styleMessDown.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Animation Login form Create</title>
+</head>
+<body>
+<section>
+	<div class="color"></div>
+	<div class="color"></div>
+	<div class="color"></div>
+	<div class="login-box">
+		<div class="login-square" style="--i:0"></div>
+		<div class="login-square" style="--i:1"></div>
+		<div class="login-square" style="--i:2"></div>
+		<div class="login-square" style="--i:3"></div>
+		<div class="login-square" style="--i:4"></div>
+        <div class="login-square" style="--i:5"></div>
+		<!-- <div class="login-square" style="--i:6"></div> -->
+		<div class="container"data-tilt>
+			<div class="login-form">
+                <p>
+                    The prediction of the model you had to consume is 
+                    <strong>{{ result }}</strong> kwhs/day/m2
+                    <br>
+                    <hr>
+					Your kwhs/day/m2 is [{{ user_kwhs }}]
+					<br>
+					<br>
+                    Congrats consumed less {{ diafora }} kwhs/day/m2
+                </p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- <script src="/static/vanilla-tilt.js"></script> -->
+</body>
+</html>

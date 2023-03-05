@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styleApiPage.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Animation Login form Create</title>
+</head>
+<body>
+<section>
+	<div class="color"></div>
+	<div class="color"></div>
+	<div class="color"></div>
+	<div class="login-box">
+		<div class="login-square" style="--i:0"></div>
+		<div class="login-square" style="--i:1"></div>
+		<div class="login-square" style="--i:2"></div>
+		<div class="login-square" style="--i:3"></div>
+		<div class="login-square" style="--i:4"></div>
+        <div class="login-square" style="--i:5"></div>
+		<!-- <div class="login-square" style="--i:6"></div> -->
+		<div class="container"data-tilt>
+			<div class="api-form">
+				<form action="/api_form" method="POST">
+					<div class="form-group col">
+						<!-- <label for="api">Input your IP</label>
+						<br> -->
+                        <input type="text" id="api" name="api" placeholder="IP" >
+					</div>
+					<input type="submit" value="Next" id="sub">
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- <script src="/static/vanilla-tilt.js"></script> -->
+</body>
+</html>
