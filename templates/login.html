@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="image/logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Energy App</title>
+	<link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+</head>
+<body>
+<section>
+	<div class="color"></div>
+	<div class="color"></div>
+	<div class="color"></div>
+	<div class="login-box">
+		<div class="login-square" style="--i:0"></div>
+		<div class="login-square" style="--i:1"></div>
+		<div class="login-square" style="--i:2"></div>
+		<div class="login-square" style="--i:3"></div>
+		<div class="login-square" style="--i:4"></div>
+        <div class="login-square" style="--i:5"></div>
+		<div class="login-square" style="--i:6"></div>
+		<div class="container"data-tilt>
+			<div class="login-form">
+				<center>
+                <p>Welcome to the <br>Energy App</p>
+				</center>
+				<form action="/form_login" method="POST">
+
+					<div class="login-inputbox">
+						<input type="text" id="First name" name="First name" placeholder="First name">
+					</div>
+					<div class="login-inputbox">
+						<input type="text" id="Second name" name="Second name" placeholder="Second name">
+					</div>
+                    <div class="login-inputbox">
+						<input type="email" id="email" name="email" placeholder="Email">
+					</div>
+					<center>
+					<div class="login-inputbox">
+						<input type="submit" value="Next">
+					</div>
+				</center>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- <script src="/static/vanilla-tilt.js"></script> -->
+</body>
+</html>

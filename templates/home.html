@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Energy App</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href='/static/styleHome.css' />
+
+</head>
+<body >
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+            <div class="login-square" style="--i:0"></div>
+            <div class="login-square" style="--i:1"></div>
+            <div class="login-square" style="--i:2"></div>
+            <div class="login-square" style="--i:3"></div>
+            <div class="login-square" style="--i:4"></div>
+            <div class="login-square" style="--i:5"></div>
+            <div class="login-square" style="--i:6"></div>
+                <div class="login-form">
+                    <form class="form-inline" action="/form_home" method="POST">  
+                        <div class="container center_div">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <label for="dwelling">Select your dwelling:</label>
+                                    <select id="dwelling" name="dwelling" class="form-control">
+                                    <option value="Family House">Family House</option>
+                                    <option value="Semidetached">Semidetached</option>
+                                    <option value="Appartment">Appartment</option>
+                                    </select>
+                                </div>
+                
+                                <div class="form-group"> </div>
+                                <div class="form-group"> </div>
+                
+                                <div class="form-group col">
+                                    <label for="dwelling">Select your square footage:</label>
+                                    <input type="number" id="HouseholdM2" name="HouseholdM2" 
+                                    value="100"
+                                    placeholder="Household m2"
+                                     >
+                                </div>
+                
+                                <div class="form-group"> </div>
+                                <div class="form-group"> </div>
+                
+                                <div class="form-group col">
+                                    <label for="dwelling">Select your number of bedrooms:</label>
+                                    <input type="number" id="Bedrooms" name="Bedrooms" 
+                                    value = 4
+                                    placeholder="Bedrooms" >
+                                </div>
+                
+                                <div class="form-group"> </div>
+                                <div class="form-group"> </div>
+                
+                                <div class="form-group col">
+                                    <label for="years">Select your home age</label>
+                                    <br>
+                                    <select id="years" name="years" class="form-control">
+                                        <option value="0-5">0 - 5</option>
+                                        <option value="6-15">6 - 15</option>
+                                        <option value="16-30">16 - 30</option>
+                                        <option value="30+">30+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Change row -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="heatingS">Heating source</label>
+                                    <select id="heatingS" name="heating_source" class="form-control">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                
+                                <div class="form-group"> </div>
+                                <div class="form-group"> </div>
+
+                                <div class="form-group">
+                                    <label for="dwelling">Select your area code:</label>
+                                    <input type="number" id="AreaCode" name="AreaCode" 
+                                    value = 55132
+                                    placeholder="AreaCode" >
+                                </div>
+                
+                                <div class="form-group"> </div>
+                                <div class="form-group"> </div>
+                            </div>
+                
+                            <br>
+                            <br>
+                
+                            <div class="form-group"> </div>
+                            <div class="form-group"> </div>
+
+                            <!-- Change row -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="income">Select your yearly income</label>
+                                    <select id="income" name="income" class="form-control">
+                                        <option value="0 - 10,000€">0 - 10,000€</option>
+                                        <option value="10,001€ - 20,000€">10,001€ - 20,000€</option>
+                                        <option value="20,001€ - 40,000€">20,001€ - 40,000€</option>
+                                        <option value="40,000€ - 60,000€">40,000€ - 60,000€</option>
+                                        <option value="άνω των 60,0001€">> 60,0001€</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="waterHeater">Select your water heater</label>
+                                    <select id="waterHeater" name="water_heater" class="form-control">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                            </div class="form-row">
+                
+                            <div class="form-group"> </div>
+                            <div class="form-group"> </div>
+                            <!-- Change row but create group elements -->
+                
+                            <br>
+                            <br>
+                
+                            <div class="form-row">
+                
+                                <div class="form-group col">
+                                    <label for="waterHeater">Select Occupants</label>
+                                    <input type="number" id="Occupants" name="Occupants" 
+                                    value = 4
+                                    placeholder="Occupants" >
+                                </div>
+                                <div class="form-group"> </div>
+                                <div class="form-group col">
+                                    <label for="waterHeater">Select Children</label>
+                                    <input type="number" id="Children" 
+                                    value = 2
+                                    name="Children" placeholder="Children" >
+                                </div>
+                                <div class="form-group"> </div>
+                                <div class="form-group col">
+                                    <label for="waterHeater">Select Teenagers</label>
+                                    <input type="number" id="Teenagers" name="Teenagers" 
+                                    value = 0
+                                    placeholder="Teenagers" >
+                                </div>
+                                <div class="form-group"> </div>
+                                <div class="form-group col">
+                                    <label for="waterHeater">Select Adults</label>
+                                    <input type="number" id="Adults" name="Adults" 
+                                    value = 2
+                                    placeholder="Adults" >
+                                </div>
+                                <div class="form-group"> </div>
+                                <div class="form-group col">
+                                    <label for="waterHeater">Select Elders</label>
+                                    <input type="number" id="Elders" name="Elders" 
+                                    value = 2
+                                    placeholder="Elders" >
+                                </div>
+                            </div>
+                    
+                            <!-- Change row but have group elements -->
+                
+                            <br>
+                            <br>
+                
+                            <div class="form-row">
+                
+                                <div class="form-group col">
+                                    <label for="waterHeater">Select Fulltimers</label>
+                                    <input type="text" id="Fulltimers" name="Fulltimers" 
+                                    value = 2
+                                    placeholder="Fulltimers" >
+                                </div>
+                
+                                <div class="form-group"> </div>
+                                <div class="form-group"> </div>
+                
+                                <div class="form-group col">
+                                    <label for="waterHeater">Select Parttimers</label>
+                                    <input type="number" id="Parttimers" name="Parttimers" 
+                                    value = 0
+                                    placeholder="Parttimers" >
+                                </div>
+                
+                                <div class="form-group"> </div>
+                                <div class="form-group"> </div>
+                
+                                <div class="form-group col">
+                                    <label for="waterHeater">Select Graduates</label>
+                                    <input type="number" id="Grads" 
+                                    value = 0
+                                    name="Grads" placeholder="Grads" >
+                                </div>
+                
+                                <div class="form-group"> </div>
+                                <div class="form-group"> </div>
+                
+                                <div class="form-group col">
+                                    <label for="waterHeater">Select Postgraduates</label>
+                                    <input type="number" id="PostGrads" name="PostGrads" 
+                                    value = 0
+                                    placeholder="PostGrads" >
+                                </div>
+                
+                            </div>
+                
+                            <!-- Change row but group elements -->
+                            <br>
+                            <br>
+                
+                            <div class="form-row">
+                
+                                <div class="form-group">
+                                    <label for="recycling">Recycling</label>
+                                    <select id="recycling" name="recycling" class="form-control">
+                                        <option value="Rarely">Rarely</option>
+                                        <option value="Sometimes">Sometimes</option>
+                                        <option value="Sften Or Always">Often or Always</option>
+                                    </select>
+                                </div>
+                
+                            
+                                <div class="form-group"> </div>
+                                <div class="form-group"> </div>
+                
+                                <div class="form-group">
+                                    <label for="energyClass">Energy class</label>
+                                    <select id="energyClass" name="energy_class" class="form-control">
+                                        <option value="Rarely">Rarely</option>
+                                        <option value="Sometimes">Sometimes</option>
+                                        <option value="Often Or Always">Often or Always</option>
+                                    </select>
+                                </div>
+                
+                                <div class="form-group"> </div>
+                                <div class="form-group"> </div>
+                
+                                <div class="form-group">
+                                    <label for="thermostats">Thermostats</label>
+                                    <select id="thermostats" name="thermostats" class="form-control">
+                                        <option value="Rarely">Rarely</option>
+                                        <option value="Sometimes">Sometimes</option>
+                                        <option value="Often Or Always">Often or Always</option>
+                                    </select>
+                                </div>
+                
+                                <div class="form-group"> </div>
+                                <div class="form-group"> </div>
+                
+                                <div class="form-group">
+                                    <label for="smartPlu">Smart plugs</label>
+                                    <select id="smartPlu" name="smart_plugs" class="form-control">
+                                        <option value="Rarely">Rarely</option>
+                                        <option value="Sometimes">Sometimes</option>
+                                        <option value="Often Or Always">Often or Always</option>
+                                    </select>
+                                </div>
+                
+                            </div>
+                
+                            <!-- Change row but have group elements -->
+                            <br>
+                            <br>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="awareness">Awareness</label>
+                                    <select id="awareness" name="awareness" class="form-control">
+                                        <option value="Rarely">Rarely</option>
+                                        <option value="Sometimes">Sometimes</option>
+                                        <option value="Often Or Always">Often or Always</option>
+                                    </select>
+                                </div>
+                
+                                <div class="form-group"> </div>
+
+                                <div class="form-group"></divclass>
+                                    <label for="waterHeater">Start Date:</label>
+                                    <h4>
+                                        <input type="date" id="Start" 
+                                        value="2021-01-01"
+                                        name="Start" placeholder="Start">
+                                      </h4>
+                                </div>
+                
+                                <div class="form-group"> </div>
+                                <div class="form-group"> </div>
+                                
+                                <div class="form-group"></divclass>
+                                    <label for="waterHeater">End Date:</label>
+                                    <h4>
+                                        <input type="date" id="End" 
+                                        value="2022-01-01"
+                                        name="End" placeholder="End">
+                                      </h4>
+                                </div>
+                
+                                <div class="form-group"> </div>
+                                <div class="form-group"> </div>
+                
+                                <div class="form-group">
+                                    <label for="waterHeater">Select Kwhs used</label>
+                                    <input type="number" id="Kwhs" name="Kwhs" 
+                                    value = 4000
+                                    placeholder="Kwhs" ><br><br>
+                                </div>
+                
+                            </div>
+                
+                            <!-- Change row -->
+                            <br>
+                            <br>
+                
+                            <!-- <div class="form-row">
+                                <input type="number" id="Kwhs" name="Kwhs" placeholder="Kwhs" ><br><br>
+                            </div> -->
+                
+                            <!-- Add button submit -->
+                            <br>
+                            <br>
+                            
+                            <!-- <button type="submit" value="submit" class="btn btn-primary">Submit</button> -->
+                            <div class="login-inputbox">
+                                <input type="submit" value="Calculate">
+                            </div>
+                        </div>
+                      </form>
+                </div>      
+    </section>
+</body>
+</html>

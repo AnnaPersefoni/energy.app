@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="image/logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styleMessUp.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Energy App</title>
+	<link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+</head>
+<body>
+<section>
+	<div class="color"></div>
+	<div class="color"></div>
+	<div class="color"></div>
+	<div class="login-box">
+		<div class="login-square" style="--i:0"></div>
+		<div class="login-square" style="--i:1"></div>
+		<div class="login-square" style="--i:2"></div>
+		<div class="login-square" style="--i:3"></div>
+		<div class="login-square" style="--i:4"></div>
+        <div class="login-square" style="--i:5"></div>
+		<div class="login-square" style="--i:6"></div>
+		<div class="container"data-tilt>
+			<div class="login-form">
+				<center>
+                <p> You used more power than the model predicted.
+				</p>
+				</center>
+				<br>
+				<br>
+				<p style="font-size:90%;"style="text-align:center;">
+					<center>
+					The prediction of the model you had to consume is 
+					<strong>{{ result }}</strong> kwhs/day/m<sup>2</sup>.
+					<br>
+					<br>
+					Your kwhs/day/m<sup>2</sup> <strong>[{{ user_kwhs }}]</strong>.
+					<br>
+					<br>
+					You have consumed <strong>{{ diafora }}</strong> more kwhs/day/m<sup>2</sup>.
+					</center>
+				</p>
+				<center>
+					<img src="{{url_for('static', filename='images/red.png')}}" />
+				</center>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- <script src="/static/vanilla-tilt.js"></script> -->
+</body>
+</html>
